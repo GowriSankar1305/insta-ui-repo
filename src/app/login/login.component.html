@@ -1,0 +1,63 @@
+      <body class="hold-transition login-page">
+        <div class="login-box">
+          <div class="login-logo">
+            <a href="#"><b>Instagram</b></a>
+          </div>
+          <!-- /.login-logo -->
+          <div class="card">
+            <div class="card-body login-card-body">
+              <p class="login-box-msg">Sign in to start your session</p>
+              <form [formGroup]="loginFrm" (ngSubmit)="loginUser()">
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control form-control-sm" formControlName="userName" placeholder="enter email id or user name">
+                  <div class="input-group-append">
+                    <div class="input-group-text">
+                      <span class="fas fa-envelope"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="input-group mb-3">
+                  <input type="password" class="form-control form-control-sm" formControlName="password" placeholder="enter your password">
+                  <div class="input-group-append">
+                    <div class="input-group-text">
+                      <span class="fas fa-lock"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-8">
+                    <div class="icheck-primary">
+                      <input type="checkbox" id="remember">
+                      <label for="remember">
+                        Remember Me
+                      </label>
+                    </div>
+                  </div>
+                  <!-- /.col -->
+                  <div class="col-4">
+                    <button type="submit" class="btn btn-primary btn-block btn-sm" [disabled]="isDisabled">Sign In</button>
+                  </div>
+                  <!-- /.col -->
+                </div>
+              </form>
+        
+              <div class="social-auth-links text-center mb-3">
+                <p class="text-danger" [innerHtml]="errorMsg"></p>
+                <p>- OR -</p>
+                <a href="#" class="btn btn-block btn-primary btn-sm">
+                  <i class="fab fa-facebook mr-2"></i> Sign in using Facebook
+                </a>
+              </div>
+              <!-- /.social-auth-links -->
+        
+              <p class="mb-1">
+                <a [routerLink]="['/user/forgot-pwd']">I forgot my password</a>
+              </p>
+              <p class="mb-0">
+                <a [routerLink]="['/user/register']" class="text-center">Create an account</a>
+              </p>
+            </div>
+            <!-- /.login-card-body -->
+          </div>
+        </div>
+        </body>

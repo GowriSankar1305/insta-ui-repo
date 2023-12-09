@@ -1,0 +1,10 @@
+.story {
+    height: 78px;
+    width: 77px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #F35369;
+  }
+button:hover {
+  color: rgb(228, 23, 211);
+}

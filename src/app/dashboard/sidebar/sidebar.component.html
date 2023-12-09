@@ -1,0 +1,83 @@
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4" style="position: fixed;">
+    <!-- Brand Logo -->
+    <a [routerLink]="['/user/dashboard']" class="brand-link">
+      <img src="assets/images/insta-logo.png" alt="Instaram Logo" class="brand-image img-circle elevation-3">
+      <span class="brand-text font-weight-bold">Instagram</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="assets/images/user.jpg" class="img-circle elevation-2" alt="Acc Image">
+        </div>
+        <div class="info">
+          <a [routerLink]="['/user/account']" class="d-block">Alexander Pierce</a>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <li class="nav-item">
+            <a [routerLink]="['/user/dashboard']" class="nav-link">
+              <i class="nav-icon fas fa-home"></i>
+              <p>Home</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a [routerLink]="['/user/search']" class="nav-link">
+              <i class="nav-icon fas fa-search"></i>
+              <p>Search</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a [routerLink]="['/user/explore']" class="nav-link">
+              <i class="nav-icon fas fa-compass"></i>
+              <p>Explore</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a [routerLink]="['/user/reels']" class="nav-link">
+              <i class="nav-icon fas fa-film"></i>
+              <p>Reels</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a [routerLink]="['/user/messages']" class="nav-link">
+              <i class="nav-icon fas fa-envelope"></i>
+              <p>Messages</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a [routerLink]="['/user/notifications']" class="nav-link">
+              <i class="nav-icon fas fa-heart"></i>
+              <p>Notifications</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a [routerLink]="['/user/post']" class="nav-link">
+              <i class="nav-icon far fa-plus-square"></i>
+              <p>Create</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a [routerLink]="['/user/settings']" class="nav-link">
+              <i class="nav-icon fas fa-ellipsis-h"></i>
+              <p>Settings</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a [routerLink]="['/user/logout']" class="nav-link">
+              <i class="nav-icon fas fa-edit"></i>
+              <p>Logout</p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>

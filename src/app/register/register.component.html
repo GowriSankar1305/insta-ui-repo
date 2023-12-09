@@ -1,0 +1,122 @@
+ <body class="hold-transition register-page">
+  <div class="register-box" style="width: 450px;">
+    <div class="register-logo">
+      <b>Instagram</b>
+    </div>
+    <div class="card">
+      <div class="card-body register-card-body">
+        <p class="login-box-msg">Create a new account</p>
+        <form [formGroup]="userRegForm" (ngSubmit)="createUser()">
+          <div class="row">
+            <div class="col-md-6 mb-3">
+                <input type="text" class="form-control form-control-sm" formControlName="mobile" id="mobile" placeholder="enter your mobile number">
+            </div>
+            <div class="col-md-6 mb-3">
+                <input type="email" class="form-control form-control-sm" formControlName="email" id="email" placeholder="enter your email id">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <input type="text" class="form-control form-control-sm" formControlName="fullName" id="fullName" placeholder="enter your full name">
+            </div>
+            <div class="col-md-6 mb-3">
+              <input type="text" class="form-control form-control-sm" formControlName="userName" id="userName" placeholder="enter your username">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <input type="password" class="form-control form-control-sm" formControlName="currentPassword" id="currentPassword" placeholder="enter your password">
+            </div>
+            <div class="col-md-6 mb-3">
+              <input type="password" class="form-control form-control-sm" placeholder="Retype password" formControlName="confirmPassword" id="confirmPassword" placeholder="re enter your password">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-5">
+              <!-- select -->
+              <div class="form-group">
+                <select class="form-select form-select-sm" formControlName="month" (change)="getDays()">
+                  <option *ngFor="let mn of months">{{mn}}</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="form-group">
+                <select class="form-select form-select-sm" formControlName="year">
+                  <option *ngFor="let yr of years">{{yr}}</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="form-group">
+                <select class="form-select form-select-sm" formControlName="date">
+                  <option *ngFor="let d of days">{{d}}</option>
+                </select>
+              </div>
+            </div>
+          </div>
+           <div class="row">
+              <div class="col-sm-12">
+                <div class="form-group">
+                <select class="form-select form-select-sm" id="month" formControlName="gender">
+                  <option value="" [defaultSelected]=true>Gender</option>
+                <option value="MALE">MALE</option>
+                <option value="FEMALE">FEMALE</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <button type="submit" class="btn btn-primary btn-block btn-sm" [disabled]="isDisabled">Sign up</button>
+            </div>
+            <div class="col-md-6">
+              <button type="button" class="btn btn-primary btn-block btn-sm" (click)="resetForm()">Reset</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-8">
+              <!-- <div class="icheck-primary">
+                <input type="checkbox" id="agreeTerms" name="terms" value="agree">
+                <label for="agreeTerms">
+                 I agree to the <a href="#">terms</a>
+                </label>
+              </div> -->
+              <a [routerLink]="['/user/login']" class="text-center">I already have an account</a>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- /.form-box -->
+    </div><!-- /.card -->
+  </div>
+  </body>
+
+<!-- Modal -->
+<div class="modal fade" id="errModal" style="color: #f4142b;" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Errors</h5>
+      </div>
+      <div class="modal-body" [innerHtml]="modalContent">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger btn-sm" (click)="closeModal()">Okay</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="scssModal" style="color: #09f42c;" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p>Account created successfully!</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success btn-sm" (click)="closeSuccessModal()">Ok</button>
+      </div>
+    </div>
+  </div>
+</div>

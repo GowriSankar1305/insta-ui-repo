@@ -1,0 +1,15 @@
+.sc-btn {
+    font-size: 30px;
+    border: none;
+    outline: none;
+    transition: transform;
+}
+.lk-btn {
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+.lk-btn:click {
+    transform: scale(0.25);
+}

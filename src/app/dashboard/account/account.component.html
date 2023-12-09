@@ -1,0 +1,98 @@
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+        <app-sidebar></app-sidebar>
+        <div class="content-wrapper">
+            <!-- <app-header></app-header> -->
+            <section class="content">
+        <div class="card card-primary card-outline">
+          <div class="card-body box-profile">
+            <div class="row mb-4">
+              <div class="col-md-4">
+                <img class="img-circle pp"  src="assets/images/placeholder.png" alt="User profile picture">
+                <h3 class="profile-username">{{userName}}</h3>
+                <p class="text-muted">{{fullName}}</p>
+              </div>
+              <div class="col-md-8">
+                <div class="row  mb-4">
+                  <div class="col-md-4 text-center">
+                    <a href="#" class="mr-2 fw-bold">{{followers}}</a><p>Followers</p>
+                  </div>
+                  <div class="col-md-4 text-center">
+                    <a href="#" class="mr-2 fw-bold">{{following}}</a><p>Following</p>
+                  </div>
+                  <div class="col-md-4 text-center">
+                    <a href="#" class="mr-2 fw-bold">{{posts}}</a><p>Posts</p> 
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <small [innerHTML]="bio"></small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+
+        <div class="card">
+          <div class="card-header">
+            <div class="row">
+              <div class="col-md-3"><a href="#" class="fw-bold"><i class="fas fa-bars mr-2"></i><small>POSTS</small></a></div>
+              <div class="col-md-3"><a href="#" class="fw-bold"><i class="fas fa-film mr-2"></i><small>REELS</small></a></div>
+              <div class="col-md-3"><a href="#" class="fw-bold"><i class="fas fa-bookmark mr-2"></i><small>SAVED</small></a></div>
+              <div class="col-md-3"><a href="#" class="fw-bold"><i class="fas fa-user-tag mr-2"></i><small>TAGGED</small></a></div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="row mb-3">
+              <div class="col-sm-4">
+                <img class="img-fluid" src="assets/images/photo.png" alt="Photo">
+              </div>
+              <div class="col-sm-4">
+                <img class="img-fluid" src="assets/images/photo.png" alt="Photo">
+              </div>
+              <div class="col-sm-4">
+                <img class="img-fluid" src="assets/images/photo.png" alt="Photo">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-sm-4">
+                <img class="img-fluid" src="assets/images/photo.png" alt="Photo">
+              </div>
+              <div class="col-sm-4">
+                <img class="img-fluid" src="assets/images/photo.png" alt="Photo">
+              </div>
+              <div class="col-sm-4">
+                <img class="img-fluid" src="assets/images/photo.png" alt="Photo">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-sm-4">
+                <img class="img-fluid" src="assets/images/photo.png" alt="Photo">
+              </div>
+              <div class="col-sm-4">
+                <img class="img-fluid" src="assets/images/photo.png" alt="Photo">
+              </div>
+              <div class="col-sm-4">
+                <img class="img-fluid" src="assets/images/photo.png" alt="Photo">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-sm-4">
+                <img class="img-fluid" src="assets/images/photo.png" alt="Photo">
+              </div>
+              <div class="col-sm-4">
+                <img class="img-fluid" src="assets/images/photo.png" alt="Photo">
+              </div>
+              <div class="col-sm-4">
+                <img class="img-fluid" src="assets/images/photo.png" alt="Photo">
+              </div>
+            </div>
+          </div>
+        </div>
+            </section>
+        </div>
+    </div>
+</body>    
