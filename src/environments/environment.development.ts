@@ -1,5 +1,5 @@
 export const environment = {
     production : false,
-    host : 'http://100.26.108.127:9090/',
+    host : 'http://54.226.88.53:9090/',
     envName : 'dev'
 };
