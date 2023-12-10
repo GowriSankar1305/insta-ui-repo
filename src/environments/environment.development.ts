@@ -1,5 +1,5 @@
 export const environment = {
     production : false,
-    host : 'http://54.226.88.53:9090/',
+    host : 'http://ec2-54-226-88-53.compute-1.amazonaws.com:9090/',
     envName : 'dev'
 };
